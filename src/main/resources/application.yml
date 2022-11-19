@@ -4,3 +4,17 @@ spring:
     url: jdbc:mysql://localhost:3306/volimed
     username: volimed
     password: qazwsx
+
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+# Tradução dos nomes dos parâmetros pagable
+#  data:
+#    web:
+#      pageable:
+#        page-parameter: pagina
+#        size-parameter: tamanho
+#        sort-parameter: ordem
