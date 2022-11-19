@@ -1,9 +1,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/volimed
-    username: volimed
-    password: qazwsx
+    url: jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/oypvj5cs0l1i18ju
+    username: bryq93o89ygw8j5j
+    password: eud2kbqvr55tck2i
+    #url: jdbc:mysql://localhost:3306/volimed
+    #username: volimed
+    #password: qazwsx
 
   jpa:
     show-sql: false

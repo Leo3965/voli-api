@@ -1,0 +1,5 @@
+url: mysql://bryq93o89ygw8j5j:eud2kbqvr55tck2i@h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/oypvj5cs0l1i18ju
+host: h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+user: bryq93o89ygw8j5j
+pass: eud2kbqvr55tck2i
+database: oypvj5cs0l1i18ju
