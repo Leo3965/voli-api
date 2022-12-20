@@ -2,10 +2,10 @@ package med.voli.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voli.api.data.dto.PacienteDTO;
-import med.voli.api.data.dto.PacienteListDTO;
-import med.voli.api.data.dto.PacienteUpdateDTO;
-import med.voli.api.data.entity.Paciente;
+import med.voli.api.domain.data.dto.PacienteDTO;
+import med.voli.api.domain.data.dto.PacienteListDTO;
+import med.voli.api.domain.data.dto.PacienteUpdateDTO;
+import med.voli.api.domain.data.entity.Paciente;
 import med.voli.api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

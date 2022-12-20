@@ -1,4 +1,4 @@
-package med.voli.api.data.enumerator;
+package med.voli.api.domain.data.enumerator;
 
 public enum Especialidade {
     ORTOPEDIA,

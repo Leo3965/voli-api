@@ -1,13 +1,13 @@
-package med.voli.api.data.entity;
+package med.voli.api.domain.data.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voli.api.data.dto.MedicoDTO;
-import med.voli.api.data.dto.MedicoUpdateDTO;
-import med.voli.api.data.enumerator.Especialidade;
+import med.voli.api.domain.data.dto.MedicoDTO;
+import med.voli.api.domain.data.dto.MedicoUpdateDTO;
+import med.voli.api.domain.data.enumerator.Especialidade;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")

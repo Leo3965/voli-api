@@ -1,6 +1,6 @@
 package med.voli.api.repository;
 
-import med.voli.api.data.entity.Paciente;
+import med.voli.api.domain.data.entity.Paciente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

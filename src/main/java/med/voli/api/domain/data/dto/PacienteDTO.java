@@ -1,4 +1,4 @@
-package med.voli.api.data.dto;
+package med.voli.api.domain.data.dto;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;

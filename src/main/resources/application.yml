@@ -14,6 +14,10 @@ spring:
       hibernate:
         format_sql: false
 
+server:
+  error:
+    include-stacktrace: never
+
 # Tradução dos nomes dos parâmetros pagable
 #  data:
 #    web:

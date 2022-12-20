@@ -1,6 +1,6 @@
-package med.voli.api.data.dto;
+package med.voli.api.domain.data.dto;
 
-import med.voli.api.data.entity.Paciente;
+import med.voli.api.domain.data.entity.Paciente;
 
 public record PacienteListDTO(
         Long id,

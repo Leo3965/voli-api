@@ -1,12 +1,12 @@
-package med.voli.api.data.entity;
+package med.voli.api.domain.data.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voli.api.data.dto.PacienteDTO;
-import med.voli.api.data.dto.PacienteUpdateDTO;
+import med.voli.api.domain.data.dto.PacienteDTO;
+import med.voli.api.domain.data.dto.PacienteUpdateDTO;
 
 @Getter
 @EqualsAndHashCode(of = "id")

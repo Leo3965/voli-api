@@ -1,7 +1,7 @@
-package med.voli.api.data.dto;
+package med.voli.api.domain.data.dto;
 
-import med.voli.api.data.entity.Medico;
-import med.voli.api.data.enumerator.Especialidade;
+import med.voli.api.domain.data.entity.Medico;
+import med.voli.api.domain.data.enumerator.Especialidade;
 
 public record MedicoListDTO(
         Long id,

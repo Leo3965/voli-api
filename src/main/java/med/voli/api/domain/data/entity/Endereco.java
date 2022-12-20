@@ -1,10 +1,10 @@
-package med.voli.api.data.entity;
+package med.voli.api.domain.data.entity;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voli.api.data.dto.EnderecoDTO;
+import med.voli.api.domain.data.dto.EnderecoDTO;
 
 @Embeddable
 @Getter
