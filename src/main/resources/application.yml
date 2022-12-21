@@ -25,3 +25,13 @@ server:
 #        page-parameter: pagina
 #        size-parameter: tamanho
 #        sort-parameter: ordem
+
+
+
+#########################################
+#      Propriedades personalizadas      #
+#########################################
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:12345678} # Variável de ambiente
