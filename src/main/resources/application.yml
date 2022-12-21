@@ -34,4 +34,4 @@ server:
 api:
   security:
     token:
-      secret: ${JWT_SECRET:12345678} # Variável de ambiente
+      secret: ${JWT_SECRET:123456} # Variável de ambiente

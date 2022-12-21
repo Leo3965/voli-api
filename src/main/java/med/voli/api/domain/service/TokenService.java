@@ -1,7 +1,6 @@
 package med.voli.api.domain.service;
 
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
@@ -19,6 +18,7 @@ public class TokenService {
 
     @Value("${api.security.token.secret}")
     private String secret;
+
     public String createToken(Usuario usuario) {
         try {
             var algorithm = Algorithm.HMAC256(secret);
@@ -37,20 +37,19 @@ public class TokenService {
         return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
     }
 
-    public void verifyToken() {
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJpc3MiOiJhdXRoMCJ9.AbIJTDMFc7yUa5MhvcP03nJPyCPzZtQcGEp-zWfOkEE";
-        DecodedJWT decodedJWT;
+    public String getSubject(String tokenJWT) {
         try {
-            Algorithm algorithm = Algorithm.HMAC256("");
-            JWTVerifier verifier = JWT.require(algorithm)
+            Algorithm algorithm = Algorithm.HMAC256(secret);
+            return JWT.require(algorithm)
                     // specify an specific claim validations
-                    .withIssuer("auth0")
+                    .withIssuer("API Voli.med")
                     // reusable verifier instance
-                    .build();
+                    .build()
+                    .verify(tokenJWT)
+                    .getSubject();
 
-            decodedJWT = verifier.verify(token);
         } catch (JWTVerificationException exception) {
-            // Invalid signature/claims
+            throw new RuntimeException("Invalid signature / claims / expired token", exception);
         }
     }
 }
