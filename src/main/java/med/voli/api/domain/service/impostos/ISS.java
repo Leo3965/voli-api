@@ -5,8 +5,14 @@ import med.voli.api.domain.data.model.Orcamento;
 
 import java.math.BigDecimal;
 
-public class ISS implements Imposto {
-    public BigDecimal calcular(Orcamento orcamento) {
+public class ISS extends Imposto {
+    public ISS(Imposto outro) {
+        super(outro);
+    }
+
+    @Override
+    protected BigDecimal realizarCalculo(Orcamento orcamento) {
         return orcamento.getValor().multiply(new BigDecimal("0.06"));
     }
+
 }

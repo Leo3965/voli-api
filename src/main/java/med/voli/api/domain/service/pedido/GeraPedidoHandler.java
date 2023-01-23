@@ -1,6 +1,7 @@
 package med.voli.api.domain.service.pedido;
 
 import med.voli.api.domain.data.interfaces.AcaoAposGerarPedido;
+import med.voli.api.domain.data.model.ItemOrcamento;
 import med.voli.api.domain.data.model.Orcamento;
 import med.voli.api.domain.data.model.Pedido;
 
@@ -15,7 +16,8 @@ public class GeraPedidoHandler {
     }
 
     public void execute(GeraPedido dados) {
-        var orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeDeItens());
+        var orcamento = new Orcamento();
+        orcamento.adicionarItem(new ItemOrcamento(dados.getValorOrcamento()));
         var pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 
         acoes.forEach(a -> a.executarAcao(pedido));

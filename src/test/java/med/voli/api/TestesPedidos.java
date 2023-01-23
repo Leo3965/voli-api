@@ -1,9 +1,6 @@
 package med.voli.api;
 
-import med.voli.api.domain.service.pedido.EnviarEmailPedido;
-import med.voli.api.domain.service.pedido.GeraPedido;
-import med.voli.api.domain.service.pedido.GeraPedidoHandler;
-import med.voli.api.domain.service.pedido.SalvarPedidoNoBancoDeDados;
+import med.voli.api.domain.service.pedido.*;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -16,7 +13,8 @@ public class TestesPedidos {
         var geraPedido = new GeraPedido("Léo", new BigDecimal("600"), 4);
         var handler = new GeraPedidoHandler(List.of(
                 new SalvarPedidoNoBancoDeDados(),
-                new EnviarEmailPedido()
+                new EnviarEmailPedido(),
+                new LogDePedido()
         ));
 
         handler.execute(geraPedido);

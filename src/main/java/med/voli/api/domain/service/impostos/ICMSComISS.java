@@ -5,14 +5,16 @@ import med.voli.api.domain.data.model.Orcamento;
 
 import java.math.BigDecimal;
 
-public class ICMS extends Imposto {
-    public ICMS(Imposto outro) {
+public class ICMSComISS extends Imposto {
+    public ICMSComISS(Imposto outro) {
         super(outro);
     }
 
     @Override
     protected BigDecimal realizarCalculo(Orcamento orcamento) {
-        return orcamento.getValor().multiply(new BigDecimal("0.1"));
+        var icms = new ICMS(null).calcular(orcamento);
+        var iss = new ISS(null).calcular(orcamento);
+        return icms.add(iss);
     }
 
 }
